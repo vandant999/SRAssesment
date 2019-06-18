@@ -9,7 +9,7 @@
     synchronize: src={{ warLocalPath }}/{{ warName }} dest={{ warRemotePath }}/{{ warName }}
 
   - name: Unzip WAR file
-    unarchive: src={{ warRemotePath }}/{{ warName }} dest=/var/lib/tomcat7/webapps/ROOT/ copy=no mode=0755 owner=tomcat7 group=tomcat7
+    unarchive: src={{ warRemotePath }}/{{ warName }} dest=/var/lib/tomcat8/webapps/ROOT/ copy=no mode=0755 owner=tomcat8 group=tomcat8
     notify:
         - Restart tomcat8
 
